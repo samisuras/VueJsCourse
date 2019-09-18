@@ -1,14 +1,17 @@
 new Vue({
     el: '#vm',
     data: {
-        contador: 0
+        x:0,
+        y:0,
+        contador:0
     },
     methods: {
-        sumarUno: function(){
-            this.contador ++;
+        mostrarUbicacion: function (e) {
+            this.x = e.clientX;
+            this.y = e.clientY;
         },
-        restarUno: function(){
-            this.contador--;
+        sumar: function(aumento){
+            this.contador+=aumento;
         }
     },
 })

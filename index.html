@@ -9,12 +9,9 @@
 </head>
 <body>
     <div id="vm">
-        <ul>
-            <button v-on:mouseEnter="sumarUno">Sumar 1</button>
-            <button v-on:click="restarUno">Restar 1</button>
-            <hr/>
-            {{contador}}
-        </ul>
+        <div style="height: 300px" v-on:mousemove="mostrarUbicacion"
+        v-on:click="sumar(3)"></div>
+        x: {{x}}, y: {{y}}, contador: {{contador}}
     </div>
     <script src="vue.js"></script>
 </body>
