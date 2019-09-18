@@ -1,17 +1,23 @@
 new Vue({
-    el: '#vm',
+    el: '#app',
     data: {
-        x:0,
-        y:0,
-        contador:0
+        titulo: 'Lista de tareas',
+        tareas: [
+            {
+                texto: 'Aprender Vue.js',
+                terminada: false
+            },
+            {
+                texto: 'Aprender Angular.js',
+                terminada: false
+            },
+            {
+                texto: 'Aprender React.js',
+                terminada: false
+            },
+        ]
     },
     methods: {
-        mostrarUbicacion: function (e) {
-            this.x = e.clientX;
-            this.y = e.clientY;
-        },
-        sumar: function(aumento){
-            this.contador+=aumento;
-        }
-    },
+
+    }
 })
