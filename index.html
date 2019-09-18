@@ -10,8 +10,8 @@
 <body>
     <div id="vm">
         <ul>
-            <li v-for="pais in paises">
-                {{pais.nombre}}
+            <li v-for="(pais, i) of paises">
+                {{i+1}} - {{pais}}
             </li>
         </ul>
     </div>
