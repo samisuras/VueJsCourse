@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- development version, includes helpful console warnings -->
+    <title>Vue</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <title>Primera aplicacion con Vue.js</title>
 </head>
 <body>
-    <div id="vue">    
-        <span>{{mensaje}}</span>
-        <hr>
-        <h2>Metodo</h2>
-        <span> {{mostrarMensaje()}} </span>
-        <img :src="src" alt="VueJs">
-        <button v-on:click="mensaje = 'Este es el nuevo mensaje'">Cambiar el mensaje</button>
-
+    <div id="vm">
+        <button v-on:click="primero++">Incrementar el primero</button>
+        <button v-on:click="segundo++"> Incrementar el segundo</button>
+        <button v-on:click="tercero++"> Incrementar el tercer</button>
+        <button v-on:click="cuarto++"> Incrementar el cuarto</button>
+        <p>Primero: {{primero}}</p>
+        <p>Segundo: {{segundo}}</p>
+        <p>Tercero: {{tercero}}</p>
+        <p>Cuarto: {{cuarto}}</p>
+        <p>Total: {{total}}</p>
     </div>
     <script src="vue.js"></script>
 </body>
