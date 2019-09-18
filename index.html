@@ -9,8 +9,13 @@
 </head>
 <body>
     <div id="vm">
-        <div v-html="texto">
-            
+        <div v-if="mostrar">
+            Este es el primer div
+            <h3>Titulo</h3>
+            <p>parrafo</p>
+        </div>
+        <div v-else>
+            Este es el segundo div
         </div>
     </div>
     <script src="vue.js"></script>
