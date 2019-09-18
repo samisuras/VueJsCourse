@@ -9,11 +9,11 @@
 </head>
 <body>
     <div id="vm">
-        <div v-if="mostrar">
+        <template v-if="mostrar">
             Este es el primer div
             <h3>Titulo</h3>
             <p>parrafo</p>
-        </div>
+        </template>
         <div v-else>
             Este es el segundo div
         </div>

@@ -1,6 +1,6 @@
 new Vue({
     el: '#vm',
     data: {
-        mostrar: true
+        mostrar: false
     }
 })
