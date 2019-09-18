@@ -9,14 +9,11 @@
 </head>
 <body>
     <div id="vm">
-        <div v-show="mostrar">
-            <h3>Titulo</h3>
-            <p>Parrafo</p>
-            Este es el primer div
-        </div>
-        <div>
-            Este es el segundo div
-        </div>
+        <ul>
+            <li v-for="pais in paises">
+                {{pais.nombre}}
+            </li>
+        </ul>
     </div>
     <script src="vue.js"></script>
 </body>

@@ -1,6 +1,6 @@
 new Vue({
     el: '#vm',
     data: {
-        mostrar: false
+        paises: [{nombre: 'Mexico'},{nombre: 'Espana'},{nombre: 'Belgica'}]
     }
 })
