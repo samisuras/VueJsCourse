@@ -1,6 +1,6 @@
 new Vue({
     el: '#vm',
     data: {
-        imagen: 'http://lorempixel.com/300/200/'
+        texto: 'Bienvenido al curso de VueJS 2!'
     }
 })
