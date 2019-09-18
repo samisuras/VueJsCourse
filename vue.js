@@ -1,6 +1,6 @@
 new Vue({
     el: '#vm',
     data: {
-        parrafo: 4
+        mostrar: false
     }
 })

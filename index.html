@@ -9,17 +9,13 @@
 </head>
 <body>
     <div id="vm">
-        <div v-if="parrafo == 1">
+        <div v-show="mostrar">
+            <h3>Titulo</h3>
+            <p>Parrafo</p>
             Este es el primer div
         </div>
-        <div v-else-if='parrafo == 2'>
+        <div>
             Este es el segundo div
-        </div>
-        <div v-else-if='parrafo == 3'>
-            Este es el tercer div
-        </div>
-        <div v-else>
-            El parrafo no es ni 1 ni 2 ni 3
         </div>
     </div>
     <script src="vue.js"></script>
