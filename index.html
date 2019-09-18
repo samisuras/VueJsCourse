@@ -10,9 +10,10 @@
 <body>
     <div id="vm">
         <ul>
-            <li v-for="(valor, llave) in empleado">
-               {{llave}} -> {{valor}}
-            </li>
+            <button v-on:mouseEnter="sumarUno">Sumar 1</button>
+            <button v-on:click="restarUno">Restar 1</button>
+            <hr/>
+            {{contador}}
         </ul>
     </div>
     <script src="vue.js"></script>
