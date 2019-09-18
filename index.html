@@ -20,22 +20,7 @@
             </div>
         </div> -->
         <nueva-tarea></nueva-tarea>
-        <ul>
-            <template v-for="(tarea,i) in tareas">
-                <div class="card">
-                    <div class="card-body" >
-                        <span class="" v-bind:class="{terminada: tarea.terminada}">
-                            {{tarea.texto}}
-                        </span>
-                        
-                        <div class="derecha" style="display: inline;">
-                            <button class="btn btn-success" v-on:click="cambiar(i)" ><i class="fas fa-check"></i></button>
-                            <button class="btn btn-danger" v-on:click="eliminar(i)"> <i class="fas fa-times"></i> </button>
-                        </div>
-                    </div>
-                </div>
-            </template>
-        </ul>
+        <lista-tareas></lista-tareas>
     </div>
     <script src="vue.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
