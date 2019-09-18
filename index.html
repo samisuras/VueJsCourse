@@ -6,16 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lista de Tareas</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>    
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="jumbotron ml-5 mr-5">
         <h1 align="center">{{titulo}}</h1>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" v-on:keyup.enter="agregarTarea" v-model="nuevaTarea" placeholder="Hacer ejercicio">
+            <div class="input-group-append">
+                <span v-on:click="agregarTarea"  class="input-group-text btn btn-primary bg-primary text-light" id="basic-addon2">Agregar Tarea</span>
+            </div>
+        </div>
         <ul>
-            <template v-for="(tarea) in tareas">
-                <li>
-                    Tarea: {{tarea.texto}}.
-                </li>
+            <template v-for="(tarea,i) in tareas">
+                <div class="card">
+                    <div class="card-body" >
+                        <span class="" v-bind:class="{terminada: tarea.terminada}">
+                            {{tarea.texto}}
+                        </span>
+                        
+                        <div class="derecha" style="display: inline;">
+                            <button class="btn btn-success" v-on:click="cambiar(i)" ><i class="fas fa-check"></i></button>
+                            <button class="btn btn-danger" v-on:click="eliminar(i)"> <i class="fas fa-times"></i> </button>
+                        </div>
+                    </div>
+                </div>
             </template>
         </ul>
     </div>
