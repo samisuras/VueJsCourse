@@ -1,6 +1,6 @@
 new Vue({
     el: '#vm',
     data: {
-        texto: 'Bienvenido al curso de VueJS 2!'
+        texto: "<em><strong>Bienvenido al curso de VueJS 2! </strong></em>"
     }
 })
