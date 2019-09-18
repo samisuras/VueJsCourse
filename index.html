@@ -10,12 +10,9 @@
 <body>
     <div id="vm">
         <ul>
-            <template v-for="(pais, i) of paises">
-                <li>
-                    {{i+1}} - {{pais}}
-                </li>
-                <hr/>
-            </template>
+            <li v-for="(valor, llave) in empleado">
+               {{llave}} -> {{valor}}
+            </li>
         </ul>
     </div>
     <script src="vue.js"></script>

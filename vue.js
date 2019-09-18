@@ -1,6 +1,13 @@
 new Vue({
     el: '#vm',
     data: {
-        paises: ['Mexico','Espana','Belgica']
+        empleado: {
+            nombre: 'Raul Samuel',
+            edad: '21 años',
+            nacionalidad: 'Mexicano',
+            profesion: 'Programador',
+            empresa: 'CCEO',
+            telefono: '4491040332'
+        }
     }
 })
