@@ -3,7 +3,7 @@ import App from './App.vue'
 
 Vue.directive('decorar',{
   bind(el,binding,vnode){
-    el.style.fontFamily = 'times new roman'
+    el.style.fontFamily = binding.value;
   }
 });
 
