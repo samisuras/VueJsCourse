@@ -6,7 +6,7 @@
       </span>
       <hr>
       <span>
-        {{mensaje}}
+        {{temperatura | aFahrenheit}}
       </span>
     </div>
   </div>
@@ -16,12 +16,16 @@
 export default {
   data(){
     return{
-      mensaje: 'Aprende Vuejs facilmente'
+      mensaje: 'Aprende Vuejs facilmente',
+      temperatura: 35
     }
   },
   filters: {
     mayusculas(mensaje){
       return mensaje.toUpperCase();
+    },
+    aFahrenheit(temperatura){
+      return (9/5 * temperatura) + 32 + ' F';
     }
   }
 }
