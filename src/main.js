@@ -8,6 +8,10 @@ Vue.directive('decorar',{
       el.style.fontWeight = 'bold';
     if(binding.modifiers['italico'])
       el.style.fontStyle = 'Italic';
+    if(binding.arg == 'grande')
+      el.style.fontSize = '2rem'
+    if(binding.arg == 'chico')
+      el.style.fontSize = '.1rem'
   }
 });
 
