@@ -34,6 +34,12 @@ export default {
   },
   data () {
       return{}
+  },
+  activated(){
+      console.log('componente activado')
+  },
+  deactivated(){
+      console.log('Componente desactivado')
   }
 }
 </script>
