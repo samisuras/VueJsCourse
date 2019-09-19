@@ -4,7 +4,8 @@
       <Titulo :titulo="titulo"/>
       {{numTareas}}
       <!-- $event es el segundo parametro pasado en el emit -->
-      <NuevaTarea :tareas="tareas" v-on:incrementarContador="numTareas += $event"/>
+      <NuevaTarea :tareas="tareas" 
+      :actualizarContador="actualizarContador"/>
       <listaTareas :tareas="tareas"/>
     </div>
   </div>
@@ -40,6 +41,11 @@ export default {
             terminada: false
         }
       ]
+    }
+  },
+  methods: {
+    actualizarContador(){
+        this.numTareas++;
     }
   }
 }

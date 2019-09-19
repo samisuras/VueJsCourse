@@ -12,7 +12,10 @@
 
 <script>
 export default {
-    props: ['tareas'],
+    props: [
+        'tareas',
+        'actualizarContador'
+    ],
     data(){
         return{
             nuevaTarea: ''
@@ -24,7 +27,7 @@ export default {
                 texto: this.nuevaTarea,
                 terminada:false
             });
-            this.$emit('incrementarContador',1);
+            this.actualizarContador();
         }
     }
 }
