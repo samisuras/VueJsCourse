@@ -24,6 +24,7 @@ export default {
                 texto: this.nuevaTarea,
                 terminada:false
             });
+            this.$emit('incrementarContador',1);
         }
     }
 }
