@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="jumbotron">
-      <span v-decorar="'times new roman'">Aprende Vue.Js facilmente</span>
+      <span v-decorar.negrilla="'times new roman'">Aprende Vue.Js facilmente</span>
     </div>
   </div>
 </template>
