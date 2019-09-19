@@ -1,5 +1,8 @@
 <template>
-    <h2>{{titulo}}</h2>
+    <div class="">
+        <h1>{{titulo}}</h1>
+        <h3>Tareas a hacer</h3>
+    </div>
 </template>
 
 <script>

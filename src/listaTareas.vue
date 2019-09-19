@@ -31,13 +31,13 @@ export default {
 }
 </script>
 
-<style>
-.derecha{
-    align-items: right;
-    float: right;
-}
-.terminada{
-    color: grey;
-    text-decoration: line-through;
-}
+<style scoped>
+    .derecha{
+        align-items: right;
+        float: right;
+    }
+    .terminada{
+        color: grey;
+        text-decoration: line-through;
+    }
 </style>
