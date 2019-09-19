@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="jumbotron">
-      <span>Aprende Vue.Js facilmente</span>
+      <span v-decorar>Aprende Vue.Js facilmente</span>
     </div>
   </div>
 </template>
