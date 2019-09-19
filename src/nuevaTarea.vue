@@ -11,6 +11,8 @@
 </template>
 
 <script>
+import {bus} from './main';
+
 export default {
     props: [
         'tareas',
@@ -27,8 +29,12 @@ export default {
                 texto: this.nuevaTarea,
                 terminada:false
             });
-            this.actualizarContador();
+            // this.actualizarContador();
+            bus.$emit('actualizarContador',this.tareas.length);
         }
+    },
+    created(){
+        bus.$emit('actualizarContador',this.tareas.length);
     }
 }
 </script>

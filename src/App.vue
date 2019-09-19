@@ -2,11 +2,12 @@
   <div id="app" class="container">
     <div class="jumbotron">
       <Titulo :titulo="titulo"/>
-      {{numTareas}}
+      
       <!-- $event es el segundo parametro pasado en el emit -->
       <NuevaTarea :tareas="tareas" 
       :actualizarContador="actualizarContador"/>
-      <listaTareas :tareas="tareas"/>
+      <listaTareas :tareas="tareas"
+      :borrarTarea="borrarTarea"/>
     </div>
   </div>
 </template>
@@ -26,7 +27,6 @@ export default {
   data(){
     return {
       titulo: '-Lista de tareas-',
-      numTareas: 3,
       tareas: [
         {
             texto: 'Aprender Vue.js',
@@ -46,6 +46,9 @@ export default {
   methods: {
     actualizarContador(){
         this.numTareas++;
+    },
+    borrarTarea(){
+      this.numTareas--;
     }
   }
 }

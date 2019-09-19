@@ -9,7 +9,7 @@
                     
                     <div class="derecha" style="display: inline;">
                         <button class="btn btn-success" v-on:click="cambiar(i)" ><i class="fas fa-check"></i></button>
-                        <button class="btn btn-danger" v-on:click="eliminar(i)"> <i class="fas fa-times"></i> </button>
+                        <button class="btn btn-danger" v-on:click="eliminar(i); borrarTarea()"> <i class="fas fa-times"></i> </button>
                     </div>
                 </div>
             </div>
@@ -19,7 +19,7 @@
 
 <script>
 export default {
-    props: ['tareas'],
+    props: ['tareas','borrarTarea'],
     methods: {
         eliminar: function(i){
             this.tareas.splice(i,1);
