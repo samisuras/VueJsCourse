@@ -31,6 +31,16 @@ export default {
             });
             // this.actualizarContador();
             bus.actualizarContador(this.tareas.length);
+            this.$http.post('tareas.json',{
+                texto: this.nuevaTarea,
+                terminada: false
+            })
+            .then(respuesta=>{
+                console.log(respuesta)
+            })
+            .catch(()=>{
+                alert('error')
+            })
         }
     },
     created(){

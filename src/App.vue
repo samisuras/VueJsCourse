@@ -17,6 +17,7 @@
 import Titulo from './TituloComponente';
 import NuevaTarea from './nuevaTarea';
 import listaTareas from './listaTareas';
+import VueResource from 'vue-resource';
 
 export default {
   components: {
@@ -27,20 +28,7 @@ export default {
   data(){
     return {
       titulo: '-Lista de tareas-',
-      tareas: [
-        {
-            texto: 'Aprender Vue.js',
-            terminada: false
-        },
-        {
-            texto: 'Aprender Angular.js',
-            terminada: false
-        },
-        {
-            texto: 'Aprender React.js',
-            terminada: false
-        }
-      ]
+      tareas: []
     }
   },
   methods: {
@@ -50,6 +38,25 @@ export default {
     borrarTarea(){
       this.numTareas--;
     }
+  },
+  created(){
+    this.$http.get('tareas.json')
+    .then(res=>{
+      return res.json();
+    })
+    .then(resJson => {
+      for(let id in resJson){
+        let tarea = {
+          id: id,
+          texto: resJson[id].texto,
+          terminada: resJson[id].terminada
+        }
+        this.tareas.push(tarea);
+      }
+    })
+    .catch(err=>{
+      alert(err);
+    })
   }
 }
 </script>

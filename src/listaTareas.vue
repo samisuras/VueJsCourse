@@ -23,9 +23,23 @@ export default {
     methods: {
         eliminar: function(i){
             this.tareas.splice(i,1);
+            let id = this.tareas[i].id;
+            this.$http.delete('tareas/'+id+'.json')
+                .then(res=>{
+                    console.log(res);
+                })
         },
         cambiar: function(i){
-            this.tareas[i].terminada = !this.tareas[i].terminada;
+            let estado = this.tareas[i].terminada = !this.tareas[i].terminada;
+            let id = this.tareas[i].id;
+
+            this.$http.patch('tareas/'+ id + '.json',
+            {
+                terminada: estado
+            })
+            .then(res => {
+                console.log(res)
+            })
         }
     }
 }
