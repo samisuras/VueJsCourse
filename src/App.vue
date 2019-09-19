@@ -2,18 +2,24 @@
   <div class="container">
     <div class="jumbotron">
       <mostrarFormulario>
-        <h3>Iniciar Sesion</h3>
-        <div class="form-group">
-            <label for="correo">Correo Electronico</label>
-            <input type="email" class="form-control" id="correo"
-            placeholder="Escribe tu correo">
+        <div slot="titulo">
+          <h3>Iniciar Sesion</h3>
         </div>
-        <div class="form-group">
-            <label for="clave">Contrasena</label>
-            <input type="password" class="form-control" id="clave"
-            placeholder="Escribe tu contrasena">
+        <div slot="elementos">
+          <div class="form-group">
+              <label for="correo">Correo Electronico</label>
+              <input type="email" class="form-control" id="correo"
+              placeholder="Escribe tu correo">
+          </div>
+          <div class="form-group">
+              <label for="clave">Contrasena</label>
+              <input type="password" class="form-control" id="clave"
+              placeholder="Escribe tu contrasena">
+          </div>
         </div>
-        <button class="btn btn-primary" >Iniciar Sesion</button>
+        <div slot="boton">
+          <button class="btn btn-primary" >Iniciar Sesion</button>
+        </div>
       </mostrarFormulario>
     </div>
   </div>

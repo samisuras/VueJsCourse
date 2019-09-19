@@ -1,6 +1,8 @@
 <template>
     <form class="form">
-        <slot></slot>
+        <slot name="titulo"></slot>
+        <slot name="elementos"></slot>
+        <slot name="boton"></slot>
     </form>
 </template>
 <script>
