@@ -30,7 +30,7 @@ export default {
                 terminada:false
             });
             // this.actualizarContador();
-            bus.$emit('actualizarContador',this.tareas.length);
+            bus.actualizarContador(this.tareas.length);
         }
     },
     created(){
