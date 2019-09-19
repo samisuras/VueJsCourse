@@ -3,6 +3,7 @@
     <div class="jumbotron">
       <Titulo :titulo="titulo"/>
       <NuevaTarea :tareas="tareas"/>
+      <listaTareas :tareas="tareas"/>
     </div>
   </div>
 </template>
@@ -11,11 +12,13 @@
 
 import Titulo from './TituloComponente';
 import NuevaTarea from './nuevaTarea';
+import listaTareas from './listaTareas';
 
 export default {
   components: {
     Titulo,
-    NuevaTarea
+    NuevaTarea,
+    listaTareas
   },
   data(){
     return {
